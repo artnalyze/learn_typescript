@@ -3,7 +3,7 @@ export class TodoItem {
   public task: string;
   public complete: boolean = false;
 
-  public constructor(id: number, task: string, complete: boolean) {
+  public constructor(id: number, task: string, complete: boolean = false) {
     this.id = id;
     this.task = task;
     this.complete = complete;
