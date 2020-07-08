@@ -16,14 +16,14 @@ var TodoCollection = /** @class */ (function () {
         return this.nextId;
     };
     TodoCollection.prototype.getTodoById = function (id) {
-        var indexITem = this.todoItems
+        var indexItem = this.todoItems
             .map(function (e) {
             return e.id;
         })
             .indexOf(id);
-        return this.todoItems[indexITem];
+        return indexItem != -1 ? this.todoItems[indexItem] : null;
     };
-    TodoCollection.prototype.markComplte = function (id, complete) {
+    TodoCollection.prototype.markComplete = function (id, complete) {
         var todoItem = this.getTodoById(id);
         if (todoItem) {
             todoItem.complete = complete;
